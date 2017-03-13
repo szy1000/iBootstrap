@@ -1,0 +1,70 @@
+// Core variables and mixins
+@import "variables";
+@import "mixins";
+
+.lt-ie9{
+	// 首页兼容开始
+	.app-search{
+		.box-circle{
+			display: none;
+		}
+	}
+	.app-date{
+		.line-two{
+			dl{
+				background: #fff;
+				filter:Alpha(opacity=20);
+				*zoom:1;
+				dd,dt{
+					position: relative;
+				}
+			}
+		}
+	}
+	// 首页兼容结束
+	
+	
+	// 律所细节开始
+	.lawFirm{
+		.lawyer-list{
+			.lawyer{
+				.photo{
+					background-image: none;
+			    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+  				src='images/lawer.png',sizingMethod='scale');
+				}
+			}
+		}
+	}
+	// 律所细节结束
+	
+	// 律所列表开始
+	
+	// 律所列表结束
+	
+
+
+
+
+	//document兼容
+	 .report-list{
+	 	.step{
+	 		background-color: $brand;
+	 	}
+	 	.step-introduce{
+	 		background-color: $brand;	 		
+	 	}
+	 	.right-top{
+	 		background-image: url("images/right-top.png");
+	 		// position:absolute;
+	 		// filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+	 		// -webkit-transform: rotate(270deg); 
+	 		// -moz-transform: rotate(270deg); 
+	 		// -o-transform: rotate(270deg);
+	 		// transform: rotate(270deg);
+	 	}
+	 	.right-down{
+	 		background-image: url("images/right-down.png");
+	 	}
+	 }
+}

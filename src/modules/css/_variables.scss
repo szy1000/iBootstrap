@@ -1,0 +1,153 @@
+//Colors
+$gray-base:              #585858;
+$gray-dark:              #333333;
+$gray-light:             #f1f4f5;
+$gray-lighter:           #ccd5db;
+
+$light:                  #f4f4f4;
+$white:                  #ffffff;
+$black:                  #000000;
+
+$brand:                  #ff5722;
+$brand-blue:             #0099d9;
+$brand-red:              #e5004f;
+$brand-font:             #526069;
+$brand-gray:             #334259;
+$brand-grayer:           #e6ebed;
+$brand-forbidden:        #ccd5db;
+
+$padding-small:							10px;
+$padding-base:							15px;
+$padding-big:								20px;
+
+
+$body-bg:                #f5f5f5;
+$module-padding:         $padding-base;
+$module-margin:          $module-padding;
+$text-color:             $brand-font;
+$link-color:             #08a1ef;
+$link-hover-color:       $brand;
+
+//Typography
+$font-family-sans-serif:  "Tahoma","Helvetica Neue","Lantinghei SC",Arial,"Microsoft Yahei","Hiragino Sans GB",STXihei,Helvetica,sans-serif;
+$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+$font-family-num:         Impact;
+$font-family-more:        "Hiragino Sans GB","SimSun";
+$font-family-base:        $font-family-sans-serif;
+
+$font-size-base:          14px;
+$font-size-large:         ceil(($font-size-base * 1.1));// ~16px;
+$font-size-small:         ceil(($font-size-base * 0.85));// ~12px
+
+$font-size-h1:            floor(($font-size-base * 2.6)); // ~36px
+$font-size-h2:            floor(($font-size-base * 2.15)); // ~30px
+$font-size-h3:            ceil(($font-size-base * 1.7)); // ~24px
+$font-size-h4:            ceil(($font-size-base * 1.25)); // ~18px
+$font-size-h5:            $font-size-base;
+$font-size-h6:            ceil(($font-size-base * 0.85)); // ~12px
+
+$font-weight-small:       100;
+$font-weight-bold:        700;
+
+$line-height-base:        1.428571429; // 20/14
+$line-height-large:       28px;
+$line-height-computed:    floor(($font-size-base * $line-height-base)); // ~20px
+
+//z-index
+$nav-mobile-zindex:       1000;
+$zindex-modal-bg:         1040;
+$zindex-modal:            1050;
+
+//Icon
+$icon-font-path:          "../../fonts/";
+$icon-font-name:          "iconfont";
+$icon-font-svg-id:        $icon-font-name;
+
+//Components
+$padding-base-vertical:     6px;
+$padding-base-horizontal:   12px;
+
+$padding-large-vertical:    10px;
+$padding-large-horizontal:  15px;
+
+$padding-small-vertical:    5px;
+$padding-small-horizontal:  10px;
+
+$border-radius-base:        5px;
+$border-radius-large:       6px;
+$border-radius-small:       4px;
+
+$component-active-color:    #fff;
+
+$body-width:                1200px;
+$index-section-width:       850px;
+$index-aside-width:         330px;
+
+//Buttons
+$btn-font-weight:           normal;
+$btn-default-color:         $link-color;
+$btn-default-bg:            transparent;
+$btn-default-border:        #ccc;
+
+// Form
+$input-bg:                  #fff;
+$input-color:               $gray-base;
+$input-border:              $gray-lighter;
+$input-border-radius:       $border-radius-small;
+//** Border color for inputs on focus
+$input-border-focus:        $brand;
+//** Placeholder text color
+$input-color-placeholder:   #b2c6cd;
+$input-bg-disabled:         $gray-lighter;
+$cursor-disabled:           not-allowed;
+$input-height-base:         ($line-height-computed + ($padding-small-vertical * 2));
+$legend-color:              $gray-dark;
+$legend-border-color:       #e5e5e5;
+
+// Table
+$table-bg:                      transparent;
+$table-cell-padding:            8px;
+$table-condensed-cell-padding:  5px;
+$table-bg-accent:               #f9f9f9;
+$table-bg-hover:                #fafafa;
+$table-td-border-color:         #f4f4f4;
+$table-bg-active:               $table-bg-hover;
+$table-border-color:            $gray-lighter;
+
+//Pagination
+$pagination-margin:       5px;
+$pagination-border-color: #d6e1e5;
+$disabled-border-color:   $light;
+$disabled-background:     transparent;
+$disabled-color:          #aaa;
+
+// Media queries breakpoints form bootstrap
+
+//** Extra small screen / phone
+$screen-phone:              480px;
+
+//** Small screen / tablet
+$screen-tablet:             768px;
+
+//** Medium screen / desktop
+$screen-desktop:            992px;
+
+//** Large screen / wide desktop
+$screen-lg-desktop:         1200px;
+
+$screen-phone-max:          ($screen-tablet - 1);
+$screen-tablet-max:         ($screen-desktop - 1);
+$screen-desktop-max:        ($screen-lg-desktop - 1);
+
+
+// Modal
+$modal-inner-padding:         15px;
+$modal-title-padding:         15px;
+$modal-title-line-height:     $line-height-base;
+$modal-content-bg:                             #fff;
+$modal-content-border-color:                   $gray-lighter;
+$modal-content-fallback-border-color:          #999;
+$modal-backdrop-bg:           #000;
+$modal-backdrop-opacity:      .5;
+$modal-header-border-color:   #e5e5e5;
+$modal-footer-border-color:   $modal-header-border-color;
