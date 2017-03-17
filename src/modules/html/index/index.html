@@ -1,6 +1,111 @@
+<link rel="stylesheet" href="css/swiper.css">
 <link rel="stylesheet" href="index.scss">
 
-<div class="index">
-	
+<div class="msg-box clearfix">
+  <div class="brand pull-right">
+    <img src="images/brand.jpg" alt="">
+  </div>
+  <div class="msg-list">
+    <dl class="clearfix">
+      <dt class="photo-box pull-left"><img src="images/photo.jpg" alt="photo"></dt>
+      <dd><h2>李帅</h></dd>
+      <dd><p class="company">江苏南京聚力</p></dd>
+      <dd><p class="tel">18515684</p></dd>
+    </dl>
+  </div>
 </div>
 
+<div class="main" style="background-image: url(images/main.jpg);">
+  <!-- <img src="images/main.jpg" alt=""> -->
+</div>
+
+<div class="annouce-wrapper">
+  <svg class="icon" aria-hidden="true">
+    <use xlink:href="#icon-notice"></use>
+  </svg>
+  <span>公告:</span>
+  <div class="swiper-container2 annouce">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">123456</div>
+      <div class="swiper-slide">1265656456</div>
+      <div class="swiper-slide">1247894856</div>
+    </div>
+  </div>
+</div>
+
+<div class="menu">
+  <ul class="clearfix">
+    <li>
+      <a href="calendar.html">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-calendar"></use>
+        </svg>
+        <span>会议日程</span>
+      </a>
+    </li>
+    <li>
+      <a href="hotel.html">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-hotel"></use>
+        </svg>
+        <span>酒店信息</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-QR_code"></use>
+        </svg>
+        <span>入场凭证</span>
+      </a>
+    </li>
+    
+    <li>
+      <a href="bus.html">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-bus"></use>
+        </svg>
+        <span>班车时刻表</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-search"></use>
+        </svg>
+        <span>座位查询</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-website"></use>
+        </svg>
+        <span>官方网站</span>
+      </a>
+    </li>
+  </ul>
+</div>
+ 
+<div class="overlay">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close">X</span>
+    </div>
+    <div class="modal-content">
+      <h2>公告</h2>
+      <ul>
+        <li>123456</li>
+        <li>123456</li>
+        <li>123456</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+  var main = require('js/main');
+
+  main.Slide2.init();
+  main.Show.init('.annouce','.close','.overlay');
+</script>

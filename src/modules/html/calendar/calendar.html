@@ -1,0 +1,78 @@
+<link rel="stylesheet" href="css/swiper.css">
+<link rel="stylesheet" href="calendar.scss">
+
+<div class="calendar">
+   <div class="header-box"></div>
+   <div class="content">
+     <h2>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-calendar"></use>
+        </svg>
+       <span>会议日程</span>
+     </h2>
+     <div class="day-panel">
+       <div class="panel-header">
+         2017-02-20  
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-down"></use>
+          </svg>
+       </div>
+       <div class="panel-content">
+         <ul>
+           <li>
+            <span class="time">12:00 - 22:00</span>
+            <span class="desc">午餐</span>
+            <span class="event">酒店入住签到</span>
+          </li>
+         </ul>
+       </div>
+     </div>
+     <div class="day-panel">
+       <div class="panel-header">
+         2017-02-20  
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-down"></use>
+          </svg>
+       </div>
+       <div class="panel-content">
+         <ul>
+            <li>
+              <span class="time">12:00 - 22:00</span>
+              <span class="desc">午餐</span>
+              <span class="event">酒店入住签到</span>
+            </li>
+            <li>
+              <span class="time">12:00 - 22:00</span>
+              <span class="desc">午餐午餐午餐午餐午餐</span>
+              <span class="event">酒店入住签到酒店入住签到酒店入住签到酒店入住签到</span>
+            </li>
+            <li>
+              <span class="time">12:00 - 22:00</span>
+              <span class="desc">午餐</span>
+              <span class="event">酒店入住签到</span>
+            </li>
+         </ul>
+       </div>
+     </div>
+     <div class="day-panel">
+       <div class="panel-header">
+         2017-02-20  
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-down"></use>
+          </svg>
+       </div>
+       <div class="panel-content">
+         <ul>
+           <li>12:00 - 22:00</li>
+         </ul>
+       </div>
+     </div>
+   </div>
+</div>
+
+
+<script>
+  var main = require('js/main');
+
+  main.Toggle.init('.panel-header','.panel-content','show','rotate');
+</script>

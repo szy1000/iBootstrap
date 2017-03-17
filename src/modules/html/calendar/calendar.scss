@@ -1,0 +1,105 @@
+// Core variables and mixins
+@import "variables";
+@import "mixins";
+@import "skel";
+
+// Skel Setting
+@include skel-breakpoints((
+  large: "(max-width: 623px)",
+  base:  "(max-width: 375px)",
+  small: "(max-width: 320px)"
+));
+html,body{
+  height:100%;
+}
+.calendar{
+  position: relative;
+  min-height: 100%;
+  overflow: auto;
+  background-color:#ececec;
+  .header-box{
+    height:100px;
+    width:100%;  
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-image:url("images/calendar.jpg");
+  }
+  .content{
+    padding:25px 20px;
+    h2{
+      margin:0;
+      color:#005bae;
+      svg{
+        margin-right:20px;
+        font-size:30px;
+      }
+    }
+    span{
+      display:inline-block;
+      vertical-align:text-bottom;
+      line-height:25px;
+    }
+  }
+  .day-panel{
+    .panel-header{
+      position: relative;
+      margin-top:20px;
+      padding:5px 15px;
+      border-radius:5px;
+      border:1px solid #3c92db;  
+      vertical-align:top;
+      font-size:15px;
+      color:#3c92db;
+      background-color:#fff;
+      svg{
+        position:absolute;
+        top:7px;
+        right:15px;
+      }
+    }
+    .panel-content{
+      padding:5px 15px 0;
+      display:none;
+      opacity:0;
+      transition:300ms ;
+      li{
+        display:flex;
+        justify-content:flex-start;
+        color:#838383;
+      }
+      span{
+        padding:3px 5px;
+        text-align:center;
+        &.time{
+          padding:0;
+          width:30%;
+        }
+        &.desc{
+          padding:0 0 0 3px;
+          width:20%;
+        }
+        &.event{
+          width:50%;
+        }
+      }
+    }
+  }
+  ul{
+    margin:0;
+    padding:0;
+    list-style-type: none;
+  }
+
+  .show{
+    display: block;
+    opacity: 1!important;
+  }
+  .rotate{
+    filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}

@@ -1,0 +1,79 @@
+// Core variables and mixins
+@import "variables";
+@import "mixins";
+@import "skel";
+
+// Skel Setting
+@include skel-breakpoints((
+  large: "(max-width: 623px)",
+  base:  "(max-width: 375px)",
+  small: "(max-width: 320px)"
+));
+
+.onepage{
+  height:100%;
+}
+.welcome{
+  height:100%;
+  text-align:center;
+  overflow: hidden;
+  background-size: cover;
+  background-image: url("images/bg.jpg");
+  img{
+    margin-top:5%;
+    width:30%;
+  } 
+  .title{
+    margin-top:15%;
+    h1{
+      font-size:30px;
+    }
+    h2{
+      font-size:25px;
+    }
+  }
+  .greeting{
+    margin: 0 auto;
+    width:70%;
+    text-align:left;
+  }
+
+  span{
+    display:inline-block;
+    margin-top:10%;
+    padding:10px 20px;
+    font-weight:bold;
+    color:#fff;
+    background:red;
+  }
+  form{
+    margin:0 auto;
+    width:80%;
+    font-size:20px;
+    ul{
+      margin:0;
+      padding:0;
+      list-style-type: none;
+    }
+    li{
+      margin-bottom:10px;
+      border-bottom: 1px solid #fff;
+    }
+    input{
+      padding:5px 10px;
+      background:transparent;
+      border:none;
+      &:focus{
+        outline:none;
+      }
+    }
+    button{
+      margin-top:10%;
+      padding:10px 20px;
+      font-weight:bold;
+      color:#fff;
+      background:red;
+      border:none;
+    }
+  }
+}

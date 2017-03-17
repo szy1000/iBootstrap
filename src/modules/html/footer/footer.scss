@@ -1,8 +1,43 @@
-// Core variables and mixins
 @import "variables";
 @import "mixins";
-@import "modal";
+@import "skel";
+
+// Skel Setting
+@include skel-breakpoints((
+  large: "(max-width: 623px)",
+  base:  "(max-width: 375px)",
+  small: "(max-width: 320px)"
+));
+
 
 .footer{
-	
+	position: fixed;
+	bottom:0;
+	width:100%;
+	z-index:999;
+	.box{
+		float: left;
+		width: 25%;
+	}
+	a{
+		padding:10px 0;
+		display: block;
+		text-align: center;
+		color: #fff;
+		i{
+			margin-right: 6px;
+		}
+	}
+	a.home{
+		background-color:#5577b7;
+	}
+	a.abstract{
+		background-color:#f86c5f;
+	}
+	a.news{
+		background-color:#0fa3b1;
+	}
+	a.member{
+		background-color:#f35b68;
+	}
 }

@@ -1,3 +1,8 @@
+//1px border
+//@mixin border($unit,$kind,$color){
+//  border: $unit $kind $color!important;
+//}
+
 // User-select
 @mixin user-select($select) {
   -webkit-user-select: $select;
@@ -48,6 +53,7 @@
 // Text-justify
 @mixin text-justify(){
   text-align: justify;
+  text-align-last: justify;
   text-justify: inter-ideograph; //IE支持属性
 }
 

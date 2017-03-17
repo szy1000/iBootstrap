@@ -1,0 +1,75 @@
+<link rel="stylesheet" href="hotel.scss">
+<link rel="stylesheet" href="css/swiper.css">
+
+<div class="hotel">
+  <div class="header-box"></div>
+  <div class="content">
+    <h2>
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-hotel"></use>
+      </svg>
+      <span>会场与酒店信息</span>
+    </h2>
+    <div id="map"></div>
+    <div class="msg-panel">
+      <div class="panel-header">
+        <span>主会场地点</span>
+      </div>
+      <div class="panel-content">
+        <p>南京国际博览会议中心</p>
+        <p>地址:南京建邺区金沙江西街9号</p>
+      </div>
+    </div>
+    <div class="msg-panel">
+      <div class="panel-header">
+        <span>主会场地点</span>
+      </div>
+      <div class="panel-content">
+        <p>南京国际博览会议中心</p>
+        <p>地址:南京建邺区金沙江西街9号</p>
+      </div>
+    </div>
+    <div class="msg-panel">
+      <div class="panel-header">
+        <span>主会场地点</span>
+      </div>
+      <div class="panel-content">
+        <p>南京国际博览会议中心</p>
+        <p>地址:南京建邺区金沙江西街9号</p>
+      </div>
+    </div>
+    <div class="msg-panel">
+      <div class="panel-header">
+        <span>主会场地点</span>
+      </div>
+      <div class="panel-content">
+        <p>南京国际博览会议中心</p>
+        <p>地址:南京建邺区金沙江西街9号</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  var map = new AMap.Map('map',{
+      resizeEnable: true,
+      zoom: 18,
+      resizeEnable: false,
+      dragEnable:false,
+
+      center: [118.706905,31.991327],
+    });
+    new AMap.Marker({
+        map: map,
+        position: [118.706905,31.991327],
+        icon: new AMap.Icon({            
+            size: new AMap.Size(40, 50),  //图标大小
+            image: "http://webapi.amap.com/theme/v1.3/images/newpc/way_btn2.png",
+            imageOffset: new AMap.Pixel(0, -60)
+        })        
+      });
+
+  // var main = require('js/main');
+  // main.Slide.init();
+</script>

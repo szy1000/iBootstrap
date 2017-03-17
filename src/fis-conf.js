@@ -1,5 +1,5 @@
 // 设置项目属性
-fis.set('project.name', 'justice');
+fis.set('project.name', 'zjbar-micro');
 fis.set('project.static', '/static');
 fis.set('project.files', ['*.html', 'map.json', '/test/*']);
 
@@ -59,6 +59,7 @@ fis.match(/^\/modules\/(.*\.css)$/i, {
 fis.match(/^\/modules\/(.*\.(?:png|jpg|gif))$/i, {
     release: '${project.static}/$1'
 });
+
 fis.match(/^\/modules\/(.*\.html)$/i, {
     postprocessor: fis.plugin('extras_uri')
 });
@@ -92,9 +93,9 @@ fis.match('**.tmpl', {
 fis.match('/test/**', {
   release: '$0'
 });
-// fis.match('/test/server.conf', {
-//   release: '/config/server.conf'
-// });
+fis.match('/test/server.conf', {
+  release: '/config/server.conf'
+});
 
 
 /*************************打包规范*****************************/
@@ -109,9 +110,6 @@ fis.match('::package', {
         useInlineMap: true // 资源映射表内嵌
     })
 });
-
-// 相对路径 - fis3-hook-relative
-fis.hook('relative');
 
 // 公用js
 var map = {
@@ -130,7 +128,7 @@ fis.util.map(map, function (k, v) {
 
     fis.media(k)
         .match('**.{es,js}', {
-            useHash: true,
+            useHash: false,
             domain: domain
         })
         .match('**.{scss,css}', {
@@ -139,7 +137,7 @@ fis.util.map(map, function (k, v) {
             domain: domain
         })
         .match('::image', {
-            useHash: true,
+            useHash: false,
             domain: domain
         })
         .match('**/(*_{x,y,z}.png)', {
@@ -168,9 +166,6 @@ fis.util.map(map, function (k, v) {
         .match('/modules/**.{scss,css}', {
             packTo: '/pkg/modules.css'
         })
-        .match('/modules/html/robot/**.{scss,css}', {
-            packTo: '/pkg/robot.css'
-        })
         .match('/modules/css/**.{scss,css}', {
             packTo: ''
         })
@@ -180,11 +175,15 @@ fis.util.map(map, function (k, v) {
         .match('/modules/**.{es,js}', {
             packTo: '/pkg/modules.js'
         })
-        .match('/modules/app/**.{es,js}', {
-            packTo: '/pkg/aio.js'
-        })
+        // .match('/modules/app/**.{es,js}', {
+        //     packTo: '/pkg/aio.js'
+        // })
 });
 
+fis.hook('relative');
+fis.match('*',{
+  relative:true
+})
 
 // 发布产品库
 fis.media('prd')
@@ -195,21 +194,4 @@ fis.media('prd')
     optimizer: fis.plugin('clean-css', {
         'keepBreaks': true //保持一个规则一个换行
     })
-});
-
-// 发布产品库
-fis.media('prd-debug')
-.match('**.{es,js}', {
-    optimizer: fis.plugin('uglify-js'),
-    useHash: false
-})
-.match('::image', {
-    useHash: false
-})
-.match('**.{scss,css}', {
-    optimizer: fis.plugin('clean-css', {
-        'keepBreaks': true //保持一个规则一个换行
-    }),
-    relative: true,
-    useHash: false
 });
