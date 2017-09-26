@@ -17,15 +17,11 @@ var Slide = {
 
 var Slide2 = {
   init: function (op) {
-    require(['js/swiper'], function (Swiper) {
-      var mySwiper = new Swiper ('.swiper-container2', {
-        direction : 'vertical',
-        paginationClickable: true,
-        loop: true,
-        centeredSlides: true,
-        autoplay: 2500,
-        autoplayDisableOnInteraction: false
-      })        
+    require(['jquery','js/fullpage'], function ($) {
+      $(document).ready(function(){
+        $('.full').fullpage();
+        console.log('test');
+      })       
     })
   }
 }
