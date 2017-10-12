@@ -95,26 +95,6 @@ body{
 .fade.in {
   opacity: 1;
 }
-@mixin border($unit,$kind,$color){
-  border: $unit $kind $color!important;
-};
-@media screen and (-webkit-min-device-pixel-ratio: 2),(min-device-pixel-ratio:2) {
-  @mixin border($unit,$kind,$color){
-    border: $unit $kind $color!important;
-    -webkit-transform:scaleY(0.5);
-    transform:scaleY(0.5);
-  }
-//  @include border(0.5px,solid,#999);
-}
-@media screen and (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio:3) {
-  @mixin border($unit,$kind,$color){
-    border: $unit $kind $color!important;
-    -webkit-transform:scaleY(0.1);
-    transform:scaleY(0.1);
-  }
-//    .border { border: 0.333333px solid #999 }
-}
-
 
 //the custom by szy
 

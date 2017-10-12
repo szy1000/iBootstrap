@@ -19,7 +19,9 @@ var Slide2 = {
   init: function (op) {
     require(['jquery','js/fullpage'], function ($) {
       $(document).ready(function(){
-        $('.full').fullpage();
+        $('.full').fullpage({
+          sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90']
+        });
         console.log('test');
       })       
     })

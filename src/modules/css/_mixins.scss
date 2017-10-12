@@ -103,7 +103,7 @@
   }
   &:active,
   &.active,
-  .open > .dropdown-toggle& {
+  .open > .dropdown-toggle & {
     color: $color;
     background-color: darken($background, 10%);
         border-color: darken($border, 12%);
@@ -118,7 +118,7 @@
   }
   &:active,
   &.active,
-  .open > .dropdown-toggle& {
+  .open > .dropdown-toggle & {
     background-image: none;
   }
   &.disabled,
@@ -174,10 +174,10 @@
 // Responsive utilities
 @mixin responsive-visibility() {
   display: block !important;
-  table&  { display: table !important; }
-  tr&     { display: table-row !important; }
-  th&,
-  td&     { display: table-cell !important; }
+  table &  { display: table !important; }
+  tr &     { display: table-row !important; }
+  th &,
+  td &     { display: table-cell !important; }
 }
 
 @mixin responsive-invisibility() {
